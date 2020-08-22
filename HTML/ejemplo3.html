@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi primera práctica</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Nuestra segunda clase de HTML">
+    <meta name="Keywords" content="HTML, CSS, Tec, Desarrollo Web">
+    <meta name="author" content="Juan Velez Ballesteros">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+     <center>
+        <form name="nuestraformulario" action="#" method="post">
+            <table border="1" width="100%" cellspacing="5" cellpadding="5">
+                <th colspan="2">cuestionario</th>
+                <tr>
+                    <td>nombre:</td>
+                    <td><Input type="text" name="nombre" id="firstname" maxlength="10"></td>
+                </tr>
+                <tr>
+                    <td>Apellido:</td>
+                    <td><Input type="text" name="apellido" id="apellido" pattern="[A-Za-z]{3}"></td>
+                </tr>
+                <tr>
+                    <td>Edad:</td>
+                    <td><Input type="number" name="edad" id="edad" min="0" max=10></td>
+                <tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><Input type="password" name="password" id="password" ></td>
+                <tr>
+                <tr>
+                    <td>email:</td>
+                    <td><Input type="email" name="email" id="email" ></td>
+                <tr>
+                 <tr>
+                    <td>Fecha de nacimiento:</td>
+                    <td><Input type="datetime-local" name="fecha_nacimiento" id="fecha_nacimiento" ></td>
+                <tr>
+                <tr>
+                    <td>Foto:</td>
+                    <td><Input type="file" name="foto" id="foto" ></td>
+                <tr>
+                <tr>
+                    <td><label for="mes_inicio">Mes de inicio:</label></td>
+                    <td><Input type="month" name="mes_inicio" id="mes_inicio" ></td>
+                <tr>
+                <tr>
+                    <td><label for="carrera">Carrera:</label></td>
+                    <td>
+                    <select id="carrera">
+                        <option value="ITC">Ing en Tec de Computacion</option>
+                        <option value="ITS">Ing en Tec de Sistemas Elect</option> 
+                        <option value="IEC">Ing en Electronica y comunicaiones</option></select></td>
+                <tr>
+                <tr>
+                    <td><label for="comentarios">comentarios:</label></td>
+                    <td><textarea name="comentarios">comentarios que quieran darme</textarea>
+                    
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+     </center>
+   
+  </body>
+</html>
