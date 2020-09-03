@@ -1,0 +1,93 @@
+@import "footer";
+@import "header";
+@import "variables";
+
+$color-primario: pink;
+$fuente: Helvetica, sans-serif;
+$tamano_grande: 30px;
+
+body {
+  background-color: $color-primario;
+  font: $fuente;
+  font-size: $tamano_grande;
+}
+
+h2 {
+  font-size: $tamano_grande / 4;
+}
+
+p {
+  font-size: $tamano_grande / 4 - 5px;
+}
+
+@mixin estilo-radio($color, $size) {
+  color: $color;
+  font-size: $size;
+}
+
+.clase1 {
+  font: $fuente;
+  @include estilo-radio(blue, 50px);
+}
+
+.clase2 {
+  font-weight: bold;
+  @include estilo-radio(red, $tamano_grande/2);
+}
+
+//estilos de radios
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.box {
+  @include border-radius(10px);
+}
+
+.box_red {
+  color: red;
+  @include border-radius(10px);
+}
+
+$valor: 60;
+
+h3 {
+  color: if($valor==5, green, yellow);
+}
+
+.parrafo_entrada {
+  @if $valor==2 {
+    font-size: 10px;
+  } @else if $valor==3 {
+    font-size: 50px;
+    color: blue;
+  } @else {
+    font-weight: bold;
+  }
+}
+
+@for $iterador from 1 through 4 {
+  .p#{$iterador} {
+    font-size: $iterador * 10px;
+  }
+}
+
+@each $color_seleccionado in pink, blue, red, black {
+  .p_#{$color_seleccionado} {
+    color: $color_seleccionado;
+  }
+}
+
+@each $color, $color_fuente, $border in (rosa, pink, dotted), (rojo, red, solid),
+  (azul, blue, double)
+{
+  .#{$color} {
+    font-size: 30px;
+    background-color: $color_fuente;
+    border: $border;
+  }
+}

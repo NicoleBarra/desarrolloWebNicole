@@ -1,0 +1,87 @@
+h1 {
+  color: white;
+  font: 100% Helvetica, sens-serif; }
+
+.mensaje {
+  border: 3px solid #ffff;
+  padding: 10px;
+  color: #333; }
+
+body {
+  background-color: pink;
+  font: Helvetica, sans-serif;
+  font-size: 30px; }
+
+h2 {
+  font-size: 7.5px; }
+
+p {
+  font-size: 2.5px; }
+
+.clase1 {
+  font: Helvetica, sans-serif;
+  color: blue;
+  font-size: 50px; }
+
+.clase2 {
+  font-weight: bold;
+  color: red;
+  font-size: 15px; }
+
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+
+.box_red {
+  color: red;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+
+h3 {
+  color: yellow; }
+
+.parrafo_entrada {
+  font-weight: bold; }
+
+.p1 {
+  font-size: 10px; }
+
+.p2 {
+  font-size: 20px; }
+
+.p3 {
+  font-size: 30px; }
+
+.p4 {
+  font-size: 40px; }
+
+.p_pink {
+  color: pink; }
+
+.p_blue {
+  color: blue; }
+
+.p_red {
+  color: red; }
+
+.p_black {
+  color: black; }
+
+.rosa {
+  font-size: 30px;
+  background-color: pink;
+  border: dotted; }
+
+.rojo {
+  font-size: 30px;
+  background-color: red;
+  border: solid; }
+
+.azul {
+  font-size: 30px;
+  background-color: blue;
+  border: double; }

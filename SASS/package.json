@@ -1,0 +1,31 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "Proyecto de clase de sass de desarrollo de aplicaciones web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/main.scss public/css/main.css",
+    "watch-css": "nodemon -e scss -x  \"npm run build-css\""
+  },
+  "keywords": [
+    "sass",
+    "css",
+    "html5",
+    "responsive",
+    "boostrap"
+  ],
+  "author": "Juan",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
+    "stylelint": "^13.6.1",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2"
+  }
+}

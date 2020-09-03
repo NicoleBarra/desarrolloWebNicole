@@ -1,0 +1,17 @@
+$font-stack: Helvetica, sens-serif;
+$color_fuente: white;
+
+h1 {
+  color: $color_fuente;
+  font: 100% $font-stack;
+}
+
+%mensaje-abstracto {
+  border: 3px solid #ffff;
+  padding: 10px;
+  color: #333;
+}
+
+.mensaje {
+  @extend %mensaje-abstracto;
+}
