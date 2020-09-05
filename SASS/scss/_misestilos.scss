@@ -1,0 +1,61 @@
+$web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" !default;
+@import url($web-font-path);
+
+@mixin shadow($width: 5px) {
+  boder-style: solid;
+  border-width: 0 1px $width 1px;
+}
+
+.navbar {
+  @include shadow();
+}
+
+.bg-primary {
+  border-color: darken($primary, 10%);
+}
+
+.btn {
+  @include shadow();
+  text-transform: uppercase;
+
+  &-primary {
+    border-color: darken($secondary, 2%);
+  }
+
+  &-success {
+    border-color: lighten($primary, 5%);
+  }
+
+  &-dark {
+    border-color: $blue;
+  }
+
+  &:hover {
+    margin-top: -3px;
+  }
+}
+
+.table {
+  &-primary,
+  &-seconday {
+    color: #fff;
+  }
+
+  &-hover {
+    .table-primary:hover {
+      &,
+      > th,
+      > td {
+        background-color: darken($primary, 5%);
+      }
+    }
+
+    .table-secondary:hover {
+      &,
+      > th,
+      > td {
+        background-color: darken($secondary, 5%);
+      }
+    }
+  }
+}
