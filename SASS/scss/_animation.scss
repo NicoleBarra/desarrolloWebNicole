@@ -1,0 +1,72 @@
+$duracion1: 6s;
+$colorfin: radial-gradient(circle, yellow, blue);
+$delay: 2s;
+$radio: 200px;
+
+@keyframes animacion1 {
+  from {
+    background-color: red;
+    width: 10px;
+    height: 10px;
+  }
+
+  to {
+    background-color: $colorfin;
+    width: $radio * 2;
+    height: $radio * 2;
+    border-radius: $radio;
+  }
+}
+
+@keyframes animacion2 {
+  0% {
+    background-color: red;
+    width: 1px;
+    height: 1px;
+  }
+
+  25% {
+    background-color: blue;
+  }
+
+  50% {
+    background-color: yellow;
+  }
+
+  100% {
+    background-color: pink;
+    width: 200px;
+    heigth: 200px;
+  }
+}
+
+.clase1 {
+  width: 100px;
+  height: 200px;
+  background-color: $colorfin;
+  animation-name: animacion1;
+  animation-duration: $duracion1;
+  animation-delay: $delay;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.clase2 {
+  width: 100px;
+  height: 200px;
+  background: $colorfin;
+  animation-name: animacion2;
+  animation-duration: $duracion1;
+  animation-delay: $delay;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+p.text1 {
+  width: 140px;
+  border: 1px solid;
+  word-break: break-all;
+  writing-mode: vertical-lr;
+}
