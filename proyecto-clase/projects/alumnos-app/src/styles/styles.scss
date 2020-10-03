@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+
+$color-primario: pink;
+$fuente: Helvetica, sans-serif;
+$tamano_grande: 30px;
+
+body {
+  background-color: $color-primario;
+  font: $fuente;
+  font-size: $tamano_grande;
+}
+
+h2 {
+  font-size: $tamano_grande / 4;
+}
