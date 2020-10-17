@@ -7,6 +7,9 @@ import { Alumno } from '../../models/alumnos';
   styleUrls: ['./listado-alumnos.component.scss'],
 })
 export class ListadoAlumnosComponent implements OnInit {
+
+  alumnoSeleccionado: any;
+
   alumnos: Alumno[] = [
     { matricula: '1', nombre: 'Juan', carrera: 'ITC', edad: 21 },
     { matricula: '2', nombre: 'Sandra', carrera: 'ITC', edad: 22 },
@@ -15,5 +18,11 @@ export class ListadoAlumnosComponent implements OnInit {
   ];
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+
+  seleccionAlumnos(alumno: Alumno): void{
+    this.alumnoSeleccionado = alumno;
+
+  }
+
 }

@@ -1,4 +1,24 @@
 <p>Pase de lista</p>
-<ul>
-  <li *ngFor="let alumno of alumnos">{{ alumno.nombre }}</li>
-</ul>
+
+<table class="table table-striped table-sm">
+  <thead>
+    <tr>
+      <th>Matrícula</th>
+      <th>Nombre</th>
+      <th>Carrera</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let alumno of alumnos" (click)="seleccionAlumnos(alumno)">
+      <th>{{ alumno.matricula }}</th>
+      <td>{{ alumno.nombre }}</td>
+      <td>{{ alumno.carrera }}</td>
+    </tr>
+  </tbody>
+</table>
+<div *ngIf="alumnoSeleccionado">
+  <label>
+    Nombre:
+    <input [(ngModel)]="alumnoSeleccionado.nombre" placeholder="nombre" />
+  </label>
+</div>
