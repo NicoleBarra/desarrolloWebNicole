@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PROFESSORS } from 'projects/alumnos-app/src/app/models/professor';
 import { ProfessorService } from '../../services/professor.service';
 
 @Component({
@@ -7,14 +8,29 @@ import { ProfessorService } from '../../services/professor.service';
   styleUrls: ['./captura-profesor.component.scss']
 })
 export class CapturaProfesorComponent implements OnInit {
-  saludo: any;
-  constructor(private professor: ProfessorService) { }
+  historiaClases: string[] = [];
+  profesores = PROFESSORS;
+  clases = ["Moviles", "Algoritmos", "Fundamentos de programacion", "Seguridad"];
+  indice = 0;
+
+  constructor(private professorService: ProfessorService) { 
+    professorService.claseAceptadaAnunciada$.subscribe(
+      profesor => {
+        this.historiaClases.push(`${profesor}acepto la clase`);
+      })
+
+  }
 
   ngOnInit(): void {
   }
 
-  accion(): void{
-    this.saludo = this.professor.getSaludo();
+  inicioClase() {
+    const clase = this.clases[this.indice++];
+    this.professorService.incribirClase(clase)
+    this.historiaClases.push("Clase ${clase} inscrita");
+
   }
+
+
 
 }

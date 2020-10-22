@@ -1,14 +1,28 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfessorService {
-  hola: string = "Hola";
+  //los datos en los cuales van cambiar y se notificara
+  private claseInscrita = new Subject<string>();
+  private claseAceptada = new Subject<string>();
 
-  constructor() { }
+  claseInscritaAnunciada$ = this.claseInscrita.asObservable();
+  claseAceptadaAnunciada$ = this.claseAceptada.asObservable();
 
-  getSaludo(): string {
-      return this.hola
+  incribirClase(clase: string) {
+    this.claseInscrita.next(clase);
   }
+
+  aceptacionProfesor(prof: string) {
+    this.claseAceptada.next(prof);
+  }
+
+
+
+
+
+
 }

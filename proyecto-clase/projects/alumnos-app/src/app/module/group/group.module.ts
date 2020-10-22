@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CapturaGroupComponent } from './components/captura-group/captura-group.component';
+import {  ReactiveFormsModule } from "@angular/forms";
 
 import { GroupRoutingModule } from './group-routing.module';
 
@@ -9,7 +10,8 @@ import { GroupRoutingModule } from './group-routing.module';
   declarations: [CapturaGroupComponent],
   imports: [
     CommonModule,
-    GroupRoutingModule
+    GroupRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class GroupModule { }

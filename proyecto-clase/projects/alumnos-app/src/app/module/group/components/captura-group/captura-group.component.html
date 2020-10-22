@@ -1,1 +1,27 @@
-<p>captura-group works!</p>
+<h2>Captura de materias</h2>
+<form [formGroup]="modeloMaterias" (ngSubmit)="enviar()">
+  <label>
+    Nombre materia:
+    <input type="text" formControlName="nombreMateria" required />
+  </label>
+  <label>
+    Numero semestre:
+    <input type="text" formControlName="semestre" required />
+  </label>
+  <div formGroupName="profesor">
+    <h3>Nombre profesor</h3>
+    <label>
+      Nombre:
+      <input type="text" formControlName="nombre" />
+    </label>
+
+    <label>
+      Apellidos Profesor:
+      <input type="text" formControlName="apellido" />
+    </label>
+  </div>
+  <button type="submit">submit</button>
+</form>
+
+<p>valor de formulario: {{ modeloMaterias.value }}</p>
+<button (click)="actualizar()">Actualizar</button>

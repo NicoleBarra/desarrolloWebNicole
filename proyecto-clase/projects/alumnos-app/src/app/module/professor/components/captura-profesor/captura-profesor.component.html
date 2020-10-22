@@ -1,2 +1,9 @@
-<p>{{ saludo }}</p>
-<button (click)="accion()">Go!</button>
+<h2>Registro de profesor a materia</h2>
+<button (click)="inicioClase()">Iniciar clase</button>
+<app-professor *ngFor="let profesor of profesores"
+[profesor] = "profesor.name"></app-professor>
+
+<h3>Clases impartidas</h3>
+<ul>
+    <li *ngFor="let clases of historiaClases">{{clases}}</li>
+</ul>

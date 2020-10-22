@@ -1,1 +1,7 @@
-<p>lista-profesor works!</p>
+<h2>Listado de profesores con su materia</h2>
+<app-registro-lista-profesor
+  *ngFor="let prof of professors"
+  [professor]="prof"
+  [padre]="variable"
+>
+</app-registro-lista-profesor>
