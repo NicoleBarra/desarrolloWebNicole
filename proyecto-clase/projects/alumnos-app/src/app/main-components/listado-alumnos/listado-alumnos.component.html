@@ -22,3 +22,8 @@
     <input [(ngModel)]="alumnoSeleccionado.nombre" placeholder="nombre" />
   </label>
 </div>
+
+<button (click)="toggle()">togle</button>
+<div [@childAnimation]="estilo ? 'closed' : 'open'">
+  <p>hola a todos {{ estilo }}</p>
+</div>

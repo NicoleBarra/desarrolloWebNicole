@@ -6,16 +6,23 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<app-encabezado></app-encabezado>
-<titulo-pag-prin></titulo-pag-prin>
 
-<router-outlet></router-outlet>
-<!-- Aqui se sustituiran los elementos desde nuestra url-->
-<app-footer></app-footer>
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div *ngIf="loggedIn; else elseBlock">
+    <app-encabezado></app-encabezado>
+  </div>
+  <ng-template #elseBlock>
+    <app-encabezado-logeado></app-encabezado-logeado>
+  </ng-template>
+  <titulo-pag-prin></titulo-pag-prin>
+  
+  <router-outlet></router-outlet>
+  <!-- Aqui se sustituiran los elementos desde nuestra url-->
+  <app-footer></app-footer>
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+  <!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  

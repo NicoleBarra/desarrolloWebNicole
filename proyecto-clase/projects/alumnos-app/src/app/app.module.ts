@@ -12,11 +12,17 @@ import { TitulosComponent } from './main-components/titulos/titulos.component';
 import { GroupModule } from './module/group/group.module';
 import { ProfessorModule } from './module/professor/professor.module';
 import { PageNotFoundComponent } from './main-components/page-not-found/page-not-found.component';
-
+import { EncabezadoLogeadoComponent } from './main-components/encabezado-logeado/encabezado-logeado.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent, EncabezadoComponent, FooterComponent, ListadoAlumnosComponent, TitulosComponent, PageNotFoundComponent],
-  imports: [BrowserModule, AppRoutingModule,FormsModule,GroupModule,ProfessorModule],
+  declarations: [AppComponent, EncabezadoComponent, FooterComponent, ListadoAlumnosComponent, TitulosComponent, PageNotFoundComponent, EncabezadoLogeadoComponent],
+  imports: [BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    FormsModule,
+    GroupModule,
+    ProfessorModule],
   providers: [],
   bootstrap: [AppComponent],
 })
